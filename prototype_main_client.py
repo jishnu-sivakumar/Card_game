@@ -13,8 +13,8 @@ class Main:
         self.s = socket.socket()
         host = socket.gethostname()
         self.player = player
-        IPaddr = '26.4.87.63'
-        port = 60070
+        IPaddr = '127.0.0.1'
+        port = 5005
         self.s.connect((IPaddr, port))
 
 
@@ -37,6 +37,8 @@ class Main:
         p = self.s.recv(1024)
         dd = pickle.loads(p)
         return dd
+        
+  
 
 
 
@@ -48,8 +50,8 @@ class Game_Main:
         self.s = socket.socket()
         host = socket.gethostname()
         self.player = player
-        IPaddr = '26.4.87.63'
-        port = 60071
+        IPaddr = '127.0.0.1'
+        port = 5006
         self.s.connect((IPaddr, port))
         lis = pickle.loads(self.s.recv(2048))
         lis.append(self.player)

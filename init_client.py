@@ -17,8 +17,8 @@ def snd(data):
 
 class main:
     def __init__(self, player):
-        IPaddr = '26.4.87.63'
-        port = 60070
+        IPaddr = '127.0.0.1'
+        port = 5005
         s.connect((IPaddr, port))
 
         data = s.recv(4096)

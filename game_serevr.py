@@ -13,9 +13,9 @@ class spam:
    HEADER = 64
    s = socket.socket()         # Create a socket object
    host = socket.gethostname()# Get local machine name
-   IPaddr = socket.gethostbyname(host)
+   IPaddr = "0.0.0.0"
    print(IPaddr)
-   port = 60071            # Reserve a port for your service.
+   port = 5006            # Reserve a port for your service.
    s.bind((IPaddr, port))        # Bind to the port
 
    def __init__(self):
@@ -24,7 +24,7 @@ class spam:
       global trump_decided
       global client_sockets
       client_sockets = []
-      self.s.listen(4)
+      self.s.listen()
       lis = []
       trump_decided = False
       i = 0

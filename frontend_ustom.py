@@ -7,7 +7,7 @@ import customtkinter as ctk
 from PIL import Image
 import init_client as pc
 import prototype_main_client as mew
-import  prototye_Round_cleint as prc
+
 
 
 player = input("Enter name:")
@@ -37,7 +37,7 @@ class Main_Window(ctk.CTk):
 
 
         self.Board_frame = Board_Frame(self, height = 400, width= 600)
-        self.mainloop()
+        self.Board_frame.place(relx = 0.5, rely= 0.5, anchor = "center")
 
     def __str__(self):
         return("Windiw")
@@ -294,8 +294,8 @@ for i in range(0,6):
 
 print("staring round client")
 
-
-
+input("ready2?")
 connect_game = mew.Game_Main(player)
-threading.Thread(target= connect_game.keep_recv ).start()
-Main_Window()
+threading.Thread(target= connect_game.keep_recv).start()
+app = Main_Window()
+app.mainloop()
