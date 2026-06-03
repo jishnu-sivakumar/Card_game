@@ -4,10 +4,10 @@ Worked with socket and tkinter to create a multiplayer(LAN/TCP) Card game
 
 
 dependencies:
-
+```bash
 pip install customtkinter
 pip install pillow
-
+```
 
 run 2 servers,
 Init_server : for initialising all players and assigning their cards
